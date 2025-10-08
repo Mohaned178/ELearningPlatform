@@ -8,7 +8,6 @@ A robust **RESTful API** for an online learning management system built with **.
 
 ### **Authentication & Authorization**
 - User registration and login with **JWT authentication**
-- **Role-based access control** (Student, Instructor, Admin)
 - Secure **password hashing**
 - Token-based authentication
 
@@ -55,4 +54,63 @@ A robust **RESTful API** for an online learning management system built with **.
 ---
 
 ## 📂 Project Structure
+
+ELearningPlatform/
+├── 📂 Presentation/
+│   └── Controllers/
+│       ├── AccountController.cs      // Login, Register
+│       ├── CourseController.cs       // Course CRUD operations
+│       ├── EnrollmentController.cs   // Enrollment management
+│       ├── ReviewController.cs       // Course reviews
+│       └── LessonController.cs       // Lesson management
+│
+├── 📂 Business/
+│   ├── Interfaces/
+│   │   ├── IAccountService.cs
+│   │   ├── ICourseService.cs
+│   │   ├── IEnrollmentService.cs
+│   │   ├── IReviewService.cs
+│   │   └── ILessonService.cs
+│   │
+│   └── Services/
+│       ├── AccountService.cs         // Authentication logic
+│       ├── CourseService.cs          // Course business logic
+│       ├── EnrollmentService.cs      // Enrollment logic
+│       ├── ReviewService.cs          // Review management
+│       └── LessonService.cs          // Lesson operations
+│
+├── 📂 Data/
+│   ├── Interfaces/
+│   │   ├── IApplicationUserRepository.cs
+│   │   ├── ICourseRepository.cs
+│   │   ├── IEnrollmentRepository.cs
+│   │   ├── IReviewRepository.cs
+│   │   └── ILessonRepository.cs
+│   │
+│   ├── Repositories/
+│   │   ├── ApplicationUserRepository.cs
+│   │   ├── CourseRepository.cs
+│   │   ├── EnrollmentRepository.cs
+│   │   ├── ReviewRepository.cs
+│   │   └── LessonRepository.cs
+│   │
+│   ├── ApplicationDbContext.cs       // EF Core DbContext
+│   └── 📂 Migrations/                // Database migrations
+│
+└── 📂 Domain/
+    ├── Entities/
+    │   ├── ApplicationUser.cs        // User entity
+    │   ├── Course.cs                 // Course entity
+    │   ├── Lesson.cs                 // Lesson entity
+    │   ├── Enrollment.cs             // Enrollment entity
+    │   └── Review.cs                 // Review entity
+    │
+    └── DTOs/
+        ├── LoginDTO.cs
+        ├── RegisterDTO.cs
+        ├── CourseDto.cs
+        ├── LessonDto.cs
+        ├── EnrollmentDto.cs
+        └── ReviewDto.cs
+
 
