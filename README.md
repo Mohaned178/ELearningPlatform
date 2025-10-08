@@ -55,6 +55,7 @@ A robust **RESTful API** for an online learning management system built with **.
 
 ## 📂 Project Structure
 
+```plaintext
 ELearningPlatform/
 ├── 📂 Presentation/
 │   └── Controllers/
@@ -112,5 +113,3 @@ ELearningPlatform/
         ├── LessonDto.cs
         ├── EnrollmentDto.cs
         └── ReviewDto.cs
-
-
